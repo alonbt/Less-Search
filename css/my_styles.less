@@ -1,0 +1,125 @@
+div.headerWrapper {
+	background-color:#EEEEEE;
+	border-bottom: 1px solid #000000;
+	header {
+		display: block;
+		margin: 0 auto;
+		width: 960px;
+		z-index: 4444;
+		h1 {
+		    font-size: 2em;
+			padding: 40px 0;
+			text-align: center;
+		}
+	    input#searchLessString {
+		    clear: right;
+		    float: left;
+		    font-size: 1.2em;
+		    margin-left: 20px;
+		    margin-top: 18px;
+		    padding: 10px;
+		    width: 40%;
+	    }
+		
+		#headerButtons {
+			float:right;
+			a#changeText {
+				
+			}
+		}
+		#file-upload {
+			float: left;
+			width: 40%;
+		}
+		#getLessCode {
+			float: right;
+			width:40%;
+			&:after {
+				content: "";
+			}
+		}
+		.clearBoth {
+			clear:both;
+		}
+	}
+}
+
+.contentWrapper {
+	background-color:#DDDDDD;
+	.content {
+	    margin: 0 auto;
+		width: 960px;
+		#viewDemo {
+		text-align: center;
+			a {
+			    display: block;
+				padding: 40px 0;
+			}
+		}
+
+	}
+}
+
+#openingBox {
+    background: none repeat scroll 0 0 #FFFFFF;
+    border: 1px solid #999999;
+    box-shadow: 1px 1px 2px #999999;
+    left: 0;
+    margin: 0 auto;
+    padding: 10px 100px 50px;
+    position: fixed;
+    right: 0;
+    top: 50px;
+    width: 960px;
+    z-index: 9999;
+	header {
+		border-bottom: 1px solid #DDDDDD;
+		padding: 20px 0;
+		#viewDemo {
+			float: right;
+		}
+		h1 {
+			float:left;
+		}	
+		&:after {
+			clear:both;
+			content:'\0000a0';
+		}
+	}
+	.inputTypes {
+		.qq-upload-button {
+		    height: 120px;
+		    text-align: left;
+		    width: 100%;
+		}
+	}
+}
+
+#openingBox-background {
+    background: none repeat scroll 0 0 rgba(255,255,255,0.8);
+    content: "";
+    display: block;
+    height: 200px;
+    left: 0;
+    position: absolute;
+    top: 0;
+    width: 200px;
+    z-index: 5555;
+}
+	
+#lessCode {
+    font-family: monospace;
+    padding: 20px;
+    position: relative;
+    //top: 100px;
+	span.highlighted {
+	    background-color: #FFFF00;
+	    font-weight: bold;
+		span.chunk {
+			background: red;
+		}
+	}
+	span.nestedHighlight1 {
+		background: rgba(0,0,0,0.1);
+	}
+}

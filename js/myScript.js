@@ -1,10 +1,6 @@
 $(document).ready(function(){
-        lessSearch.init($("#searchLessString"),$('#textAreaLessText'));
+        lessSearch.init($("#searchLessString"));
 		lessForm.init();
-
-    
-    $("#searchLessString")
-
 });
 
 var lessSearch = {
@@ -20,7 +16,7 @@ var lessSearch = {
         allMatches1 : [],
         listOfMatches : []
     },
-    init: function(inputObj,dataObj) {
+    init: function(inputObj) {
 		
 		//Init design elements
 		lessDesign.onLoad();
@@ -462,12 +458,14 @@ var lessDesign = {
 	},
 	onLoad : function(){
 		//show Demo Text
+		/*
 		$.get("readText.php?filename=demotext/demoText.txt", function(data) {
 			$('#lessCode pre.styles').html(data);
 		});	
+		*/
 		
 		//Determain Size of #openingBox-background
-		$('#openingBox-background').css({'width':$(window).width(),'height':$(window).height()})
+		/*$('#openingBox-background').css({'width':$(window).width(),'height':$(window).height()})*/
 	},
 	init : function() {
 		//Get results parameters
@@ -537,7 +535,7 @@ var lessForm = {
         }); 
 		
 		//show Demo Text
-		$('#openingBox #viewDemo').click(function(e){
+		$('#viewDemoLink').click(function(e){
 			e.preventDefault();
 			lessForm.showDemo();
 			lessForm.p.filename = "";
