@@ -28,7 +28,7 @@ var lessSearch = {
         inputObj.keyup(function(event) {
 			lessDesign.erase();
             lessSearch.params.data = lessSearch.params.originalData;
-            lessSearch.getSearch($(this));
+            lessSearch.getSearch($(this)); // Returns all search combinations in this lessSearch.params.CombArrayByIndex
                 
             if (lessSearch.params.CombArrayByIndex[0] != null) {
                 for (var que = 0; que < lessSearch.params.CombArrayByIndex[0].length; que++) {
@@ -485,8 +485,28 @@ var lessDesign = {
 	LoadDataFromInput : function(data) {
 		lessSearch.params.originalData = data;
 		$('#lessCode pre.styles').html(data);
-		lessDesign.showHidePopUp(false);
+		lessDesign.showHideContent(true);
+		/*lessDesign.showHidePopUp(false);*/
 	},
+	showHideContent : function(isShow) {
+
+		if (isShow) {
+			
+			$('.searchInputWrapper').animate({'top':'0'},500,function(){});
+			$('.headerWrapper').animate({'bottom':'400px','height':'150px'},500,function(){});
+			$('#viewDemo').animate({'opacity':'0','height':'0'},500,function(){});
+			$('.lessFileContentWrapper').css({'display':'block','opacity':'0'}).animate({'opacity':'1'},500,function(){});
+			
+		} else {	
+		
+			$('.searchInputWrapper').animate({'top':'-150px'},500,function(){});			
+			$('.headerWrapper').animate({'bottom':'0','height':'400px'},500,function(){});
+			$('#viewDemo').animate({'opacity':'1','height':'200px'},500,function(){});
+			$('.lessFileContentWrapper').animate({'opacity':'0'},500,function(){$(this).css('display','none')});
+			
+		};
+	},
+	/*
 	showHidePopUp : function (isShow){
 		if (isShow) {
 			$('#openingBox').show();
@@ -496,6 +516,7 @@ var lessDesign = {
 			$('#openingBox-background').hide();			
 		}
 	}
+	*/
 }
 
 var lessForm = {
@@ -544,7 +565,7 @@ var lessForm = {
 		//Change to new Code
 		$('#headerButtons #changeText').click(function(e){
 			e.preventDefault();
-			lessDesign.showHidePopUp(true);
+			/*lessDesign.showHidePopUp(true);*/
 		})	
 		
 		//Download file
@@ -555,6 +576,12 @@ var lessForm = {
 
 			//});
 		})
+		
+		//Return Back from search to main menu
+		$('#goBackButton').click(function(e){
+			e.preventDefault();
+			lessDesign.showHideContent(false);
+		});
     },
 	showDemo : function() {
 		$.get("readText.php?filename=demotext/demoText.txt", function(data) {
