@@ -28,7 +28,7 @@
 <div class="headerWrapper">
 	<header>
 		<h1>Search CSS Rule</h1>
-		<h2>Search for nested CSS rules inside you LESS files</h2>
+		<h2>Search for <span class="underline">nested CSS rules</span> inside your <span class="underline">LESS files</span></h2>
 	<div class="inputTypes">
 		<div id="file-upload">		
 			<noscript>			

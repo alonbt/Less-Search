@@ -31,7 +31,7 @@ body {
     font-family: DejaWebRegular,Helvetica,Arial,"times new roman",times,serif;
     font-size: 12px;
     line-height: 1.5em;
-	background-color: @bgOrange;
+	background: url("img/texture_fab.png") repeat scroll 0 0 @bgOrange;
 }
 
 * {
@@ -57,9 +57,8 @@ body {
 }
 
 div.headerWrapper {
-	background-color: @bgOrange;
+	background: url("img/texture_fab.png") repeat scroll 0 0 @bgOrange;
     color: @orange;
-	border-bottom: 1px solid #000000;
 	position: relative;
 	z-index: 9999;
 	
@@ -78,6 +77,11 @@ div.headerWrapper {
 		h2 {
 			font-size: 2em;
 			text-align: center;
+			text-shadow: 0 1px 0 rgba(255,255,255,0.9);
+			.underline {
+				font-family: 'DejaWebBold';
+				text-decoration: underline;
+			}
 		}
 	    input#searchLessString {
 		    clear: right;
@@ -129,7 +133,7 @@ div.headerWrapper {
 			}
 		}
 		.searchPageWrapper {
-			background: none repeat scroll 0 0 @bgBlue;
+			background: url("img/texture_lines.png") repeat scroll 0 0 @bgBlue;
 			
 			.searchInputWrapper {
 				background: none repeat scroll 0 0 #EEEEEE;
