@@ -28,7 +28,7 @@
 <div class="headerWrapper">
 	<header>
 		<h1>Search CSS Rule</h1>
-		<h2>Search for <span class="underline">nested CSS rules</span> inside your <span class="underline">LESS files</span></h2>
+		<h2>Search for <span class="underline bold">nested CSS rules</span> inside your <span class="underline bold">LESS files</span></h2>
 	<div class="inputTypes">
 		<div id="file-upload">		
 			<noscript>			
@@ -36,10 +36,11 @@
 				<!-- or put a simple form for upload here -->
 			</noscript>         
 		</div>
+		<div id="or-seperator" class="bold">- OR -</div>
 		<form id="getLessCode">
-			<textarea id="textAreaLessText" rows="2" cols="20">
+			<textarea id="textAreaLessText" rows="2" cols="20" placeholder="Paste your LESS code here">
 			</textarea>
-			<input type="submit" value="Submit" />
+			<input type="submit" id="textAreaLessTextSubmit" class="bold" value="GO >" />
 		</form>
 		<div class="clearBoth"></div>
 	</div>
@@ -47,16 +48,19 @@
 </div><!-- End of .headerWrapper -->
 <div class="contentWrapper">
 	<div class="content">
-		<div id="viewDemo">
-			<a href="#" id="viewDemoLink">See an Example</a>
+		<div id="viewDemo" class="bold">
+			<a href="#" id="viewDemoLink">
+				<span class="img">see an example</span>
+				<span class="text">See an Example</span>
+			</a>
 		</div><!-- End of .viewDemo -->
 		
 		<div class="searchPageWrapper">
 			<div class="searchInputWrapper">
 				<input type="text" name="searchLessString" id="searchLessString" />
 				<div id="headerButtons">
-					<a id="changeText" href="#">Upload</a>
-					<a id="downloadFile" href="#">Download</a>		
+					<a id="changeText" href="#"><span class="imgWrapper"><span class="img"></span></span><span class="text">Upload</span></a>
+					<a id="downloadFile" href="#"><span class="imgWrapper"><span class="img"></span></span><span class="text">Download</span></a>		
 				</div><!-- end of #headerButtons -->
 			</div><!-- End of .searchInputWrapper-->
 			

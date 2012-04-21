@@ -41,10 +41,6 @@
   -moz-border-radius: @radius;
 }
 
-.underline {
-    text-decoration: underline;   
-}
-
 .gradient(@color0,@color100) {
     background: none repeat scroll 0 0 #E7E4E4;
 
@@ -67,7 +63,7 @@ body {
     font-family: DejaWebRegular,Helvetica,Arial,"times new roman",times,serif;
     font-size: 12px;
     line-height: 1.5em;
-	background: url("img/texture_fab.png") repeat scroll 0 0 @bgOrange;
+	background-color: @bgOrange;
 }
 
 .bold {
@@ -114,15 +110,13 @@ div.headerWrapper {
 		overflow: hidden;
 		h1 {
 		    font-size: 3em;
-			margin: 24px auto;
+			margin: 40px auto;
 			text-align: center;
             .spriteReplace (0, 0,256px, 40px);
 		}
 		h2 {
 			font-size: 2em;
 			text-align: center;
-            margin-bottom: 50px;
-            text-shadow: 0 1px 0 rgba(255,255,255,0.9);
 		}
 	    input#searchLessString {
 		    clear: right;
@@ -142,6 +136,7 @@ div.headerWrapper {
 		}
 		#file-upload {
 			float: left;
+			width: 40%;
             .qq-uploader {
                 .qq-upload-button {
                     .rounded-corners;
@@ -164,66 +159,9 @@ div.headerWrapper {
                             margin-right: 20px;
                         }
                     }
-                    &.qq-upload-button-hover {
-                       .gradient(#CA6340,#B15638);    
-                    }
-                }
-                .qq-upload-drop-area {
-                    .rounded-corners;
-                    .gradient(#B15638,#CA6340);
-                    color:#FFFFFF;
-                }
-                .qq-upload-drop-area-active {
-                       .gradient(#CA6340,#B15638);       
                 }
             }
 		}
-        
-        #or-seperator {
-            float: left;
-            font-size: 2em;
-            left: 46px;
-            position: relative;
-            text-shadow: 0 1px 0 rgba(255, 255, 255, 0.9);
-            top: 32px;        
-        }
-        
-        #textAreaLessText {
-                width:350px;
-                .rounded-corners;
-                border: 1px solid @orange;
-                background-color: #DFA18C;
-                margin: 0;
-                padding: 10px;
-                box-shadow: 0 0 3px @orange inset;
-                color:#FFFFFF;
-                height: 60px;
-                text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.5);
-                overflow:hidden;
-                &::-webkit-input-placeholder {
-                    color: #FFFFFF;
-                    font-family: dejaWeb;
-                    
-                }
-                &:-moz-placeholder {
-                    color: #FFFFFF;
-                    font-family: dejaWeb;
-                }
-        }
-        
-        #textAreaLessTextSubmit {
-            bottom: 45px;
-            left: 284px;
-            position: relative;
-            background-color: @orange;
-            .rounded-corners;
-            border: 1px solid #FFFFFF;
-            color:#FFFFFF;
-            font-size: 2em;
-            box-shadow: 0 0 2px rgba(0, 0, 0, 0.5);
-            cursor:pointer;
-        }
-        
 		#getLessCode {
 			float: right;
 			width:40%;
@@ -241,9 +179,10 @@ div.headerWrapper {
 		}
 	}
 }
+
 .contentWrapper {
 	background: url("img/main_page_blue_bg.png") no-repeat scroll 35% 0 @lightBgBlue;
-    min-height: 161px;
+	min-height: 700px;
 	.content {
 		#viewDemo {
 		    margin: 0 auto;
@@ -276,10 +215,10 @@ div.headerWrapper {
 			}
 		}
 		.searchPageWrapper {
-			background: url("img/texture_lines.png") repeat scroll 0 0 @bgBlue;
+			background: none repeat scroll 0 0 @bgBlue;
 			
 			.searchInputWrapper {
-				background: none repeat scroll 0 0 #F2F2F2;
+				background: none repeat scroll 0 0 #EEEEEE;
 				display: block;
 				left: 50%;
 				margin-left: -480px;
@@ -289,69 +228,17 @@ div.headerWrapper {
 				top: -150px;
 				width: 960px;
 				z-index: 999;
-                border-top: 2px solid @orange;
-                border-bottom: 2px solid @orange;
 			
 				#searchLessString {
-				    font-size: 1.5em;
-                    height: 21px;
-                    margin-left: 30px;
-                    padding: 10px 0 10px 13px;
-                    width: 600px;
-                    color: @orange;
+				
+					width:600px;
 					
 				}
-				#headerButtons {	
+				#headerButtons {
+				
 					float: right;
-                    margin-right:20px;
-                    a {
-                        display: inline-block;
-                        color: @orange;
-                        text-decoration: none;
-                        text-shadow:0 1px 0 rgba(255,255,255,0.9);
-                        .imgWrapper {
-                            .transition(all,0.15s,linear);
-                            background-color:@orange;
-                            display:block;
-                            padding: 9px;
-                            width: 20px;
-                            margin: 0 auto;
-                            .rounded-corners;
-                            box-shadow: 0 1px 0 rgba(255,255,255,0.9);
-                            position: relative;
-                            bottom:0;
-                            .img {
-                                  display:block; 
-                                  margin: 0 auto;
-                            }
-                        }
-                        .text {
-                            display:block;
-                        }
-                        &#changeText .img {
-                            .spriteReplace(45px,41px,20px,20px); 
-                        }
-                        &#downloadFile .img {
-                            .spriteReplace(65px,41px,20px,20px); 
-                        }
-                        &:last-child {
-                            margin-left:20px;   
-                        }
-                        &:hover {
-                            .imgWrapper {
-                                box-shadow: 0 3px 0 lighten(@orange,20%);  
-                                bottom: 3px;
-                            }
-                        }
-                        &:active {
-                            .imgWrapper {
-                                box-shadow: 0 2px 2px 1px rgba(0, 0, 0, 0.4) inset;                                bottom: 0;
-                                position: relative;
-                               .transition(all,0s,linear);
-
-                            }
-                        }
-                    }
+					width: 200px;
+					
 				}			
 			}
 			.lessFileContentWrapper {
@@ -376,20 +263,7 @@ div.headerWrapper {
 	margin-right: -480px;
     position: absolute;
     right: 50%;
-    top: 5px;
-    color:@orange;
-    font-size:1.1em;
-    &:before {
-        .sprite(87px,40px);  
-        content: " ";
-        display: block;
-        float: left;
-        height: 13px;
-        position: relative;
-        right: 5px;
-        top: 3px;
-        width: 11px;
-    }
+    top: 0;
 }
 
 
