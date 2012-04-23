@@ -45,6 +45,10 @@
     text-decoration: underline;   
 }
 
+.whiteShadow {
+	text-shadow: 0 1px 0 rgba(255,255,255,0.9);
+}
+
 .gradient(@color0,@color100) {
     background: none repeat scroll 0 0 #E7E4E4;
 
@@ -202,12 +206,12 @@ div.headerWrapper {
                 overflow:hidden;
                 &::-webkit-input-placeholder {
                     color: #FFFFFF;
-                    font-family: dejaWeb;
+                    font-family: dejaWebRegular;
                     
                 }
                 &:-moz-placeholder {
                     color: #FFFFFF;
-                    font-family: dejaWeb;
+                    font-family: dejaWebRegular;
                 }
         }
         
@@ -283,8 +287,8 @@ div.headerWrapper {
 				display: block;
 				left: 50%;
 				margin-left: -480px;
-				margin-top: 30px;
-				padding: 40px 0;
+				margin-top: 50px;
+				padding: 30px 0 20px;
 				position: fixed;
 				top: -150px;
 				width: 960px;
@@ -355,15 +359,11 @@ div.headerWrapper {
 				}			
 			}
 			.lessFileContentWrapper {
-			
-				background: none repeat scroll 0 0 lightgray;
-				border-top: 1px solid #000000;
+				border-top: 1px solid transparent;
 				display: none;
-				margin: 20px auto 0;
-				width: 960px;
 				
 				.lessFileContent {
-					
+					margin: 20px auto 0;
 					
 				}
 	
@@ -371,33 +371,54 @@ div.headerWrapper {
 		}
 	}
 }
-
-#goBackButton {
-	margin-right: -480px;
+#lessInputStaticLine {
+    left: 50%;
+    margin-left: -25%;
     position: absolute;
-    right: 50%;
-    top: 5px;
-    color:@orange;
-    font-size:1.1em;
-    &:before {
-        .sprite(87px,40px);  
-        content: " ";
-        display: block;
-        float: left;
-        height: 13px;
-        position: relative;
-        right: 5px;
-        top: 3px;
-        width: 11px;
-    }
+    width: 960px;
+	top: -200px;
+	
+	#cssRule {
+		.whiteShadow;
+		font-size:2em;
+		color: @orange;
+	}
+	
+	#goBackButton {
+		float: right;
+		font-size: 1.1em;
+		top: 5px;
+		color:@orange;
+		&:before {
+			.sprite(87px,40px);  
+			content: " ";
+			display: block;
+			float: left;
+			height: 13px;
+			position: relative;
+			right: 5px;
+			top: 3px;
+			width: 11px;
+		}
+	}
 }
 
+#yourLessCodeText {
+	margin:0 auto;
+	width:960px;
+	color: @blue;
+	font-size:2em;
+	.whiteShadow;
+}
 
 #lessCode {
-    font-family: monospace;
-    padding: 20px;
-    position: relative;
-    //top: 100px;
+		background: none repeat scroll 0 0 rgba(255, 255, 255, 0.8);
+		border-top: 2px solid @blue;
+		font-family: monospace;
+		padding: 20px;
+		position: relative;
+		width: 920px; /*960px with padding*/
+		margin: 20px auto 0;
 	span.highlighted {
 	    background-color: #FFFF00;
 	    font-weight: bold;

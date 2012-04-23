@@ -24,7 +24,10 @@
 </head>
 
 <body>
-<a href="#" id="goBackButton">Go Back</a>
+<div id="lessInputStaticLine">
+	<span id="cssRule" class="bold">CSS Rule</span>
+	<a href="#" id="goBackButton">Go Back</a>
+</div>
 <div class="headerWrapper">
 	<header>
 		<h1>Search CSS Rule</h1>
@@ -66,6 +69,7 @@
 			
 			<div class="lessFileContentWrapper">
 				<div class="lessFileContent">
+					<div id="yourLessCodeText" class="bold">Your LESS code</div>
 					<div id="lessCode" contenteditable="true">
 						<PRE class="styles">
 

@@ -494,9 +494,10 @@ var lessDesign = {
 		if (isShow) {
 			
 			$('.searchInputWrapper').animate({'top':'0'},500,function(){});
-			$('.headerWrapper').animate({'bottom':'400px','height':'150px'},500,function(){});
+			$('.headerWrapper').animate({'bottom':'400px','height':'200px'},500,function(){});
 			$('#viewDemo').animate({'opacity':'0','height':'0'},250,function(){$(this).css('display','none')});
 			$('.lessFileContentWrapper').css({'display':'block','opacity':'0'}).animate({'opacity':'1'},500,function(){});
+			$('#lessInputStaticLine').animate({'top':'16px'},500,function(){});
 			
 		} else {	
 		
@@ -504,7 +505,7 @@ var lessDesign = {
 			$('.headerWrapper').animate({'bottom':'0','height':'400px'},500,function(){});
 			$('#viewDemo').css('display','block').animate({'opacity':'1','height':'200px'},500,function(){});
 			$('.lessFileContentWrapper').animate({'opacity':'0'},500,function(){$(this).css('display','none')});
-			
+			$('#lessInputStaticLine').animate({'top':'-200px'},500,function(){});			
 		};
 	},
 	/*
