@@ -412,16 +412,19 @@ div.headerWrapper {
 }
 
 #lessCode {
-		background: none repeat scroll 0 0 rgba(255, 255, 255, 0.8);
-		border-top: 2px solid @blue;
-		font-family: monospace;
-		padding: 20px;
-		position: relative;
-		width: 920px; /*960px with padding*/
-		margin: 20px auto 0;
+	background: none repeat scroll 0 0 rgba(255, 255, 255, 0.8);
+	border-top: 2px solid @blue;
+	font-family: monospace;
+	padding: 20px;
+	position: relative;
+	width: 920px; /*960px with padding*/
+	margin: 20px auto 0;
+	line-height: 1.6em;
 	span.highlighted {
-	    background-color: #FFFF00;
-	    font-weight: bold;
+		background-color: @blue;
+		color: #FFFFFF;
+		font-weight: bold;
+		padding: 2px 0 1px 4px;
 		span.chunk {
 			background: red;
 		}
