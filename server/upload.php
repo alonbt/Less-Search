@@ -3,6 +3,7 @@
 /**
  * Handle file uploads via XMLHttpRequest
  */
+ 
 class qqUploadedFileXhr {
     /**
      * Save the file to the specified path
